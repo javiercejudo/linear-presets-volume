@@ -1,6 +1,6 @@
 {
   "name": "linear-presets-volume",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Linear presets for volume units",
   "main": "src/linear-presets-volume.js",
   "scripts": {
