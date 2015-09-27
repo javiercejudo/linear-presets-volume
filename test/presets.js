@@ -18,7 +18,8 @@ function invert(preset) {
 
 describe('volume presets', function() {
   it('should convert correctly', function() {
-    (Math.PI * 4 / 3).should.be.exactly(convert(1e+6 * Math.PI * 4 / 3, invert(volume.cubicMetre_millilitre)), 'cubicMetre_millilitre')
+    (Math.PI * 4 / 3).should.be.exactly(convert(Math.PI * 4 / 3, invert(volume.cubicMetre_cubicMetre)), 'cubicMetre_cubicMetre')
+      .and.exactly(convert(1e+6 * Math.PI * 4 / 3, invert(volume.cubicMetre_millilitre)), 'cubicMetre_millilitre')
       .and.exactly(convert(1e3 * Math.PI * 4 / 3, invert(volume.cubicMetre_litre)), 'cubicMetre_litre')
       .and.exactly(convert(255615.66152340596, invert(volume.cubicMetre_cubicInch)), 'cubicMetre_cubicInch')
       .and.exactly(convert(147.9257300482673, invert(volume.cubicMetre_cubicFoot)), 'cubicMetre_cubicFoot')
@@ -35,7 +36,8 @@ describe('volume presets', function() {
       .and.exactly(convert(4426.245221184518, invert(volume.cubicMetre_USQuart)), 'cubicMetre_USQuart')
       .and.exactly(convert(1106.5613052961296, invert(volume.cubicMetre_USGallon)), 'cubicMetre_USGallon');
 
-    (0).should.be.exactly(convert(0, volume.cubicMetre_millilitre), 'cubicMetre_millilitre')
+    (0).should.be.exactly(convert(0, volume.cubicMetre_cubicMetre), 'cubicMetre_cubicMetre')
+      .and.exactly(convert(0, volume.cubicMetre_millilitre), 'cubicMetre_millilitre')
       .and.exactly(convert(0, volume.cubicMetre_litre), 'cubicMetre_litre')
       .and.exactly(convert(0, volume.cubicMetre_cubicInch), 'cubicMetre_cubicInch')
       .and.exactly(convert(0, volume.cubicMetre_cubicFoot), 'cubicMetre_cubicFoot')

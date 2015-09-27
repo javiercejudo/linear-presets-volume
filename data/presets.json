@@ -1,6 +1,7 @@
 {
   "base": "cubicMetre",
   "conversions": {
+    "cubicMetre": [[0, 1], [0, 1]],
     "millilitre": [[0, 1], [0, 1e6]],
     "litre": [[0, 1], [0, 1e3]],
     "cubicInch": [[0, 0.000016387064], [0, 1]],
